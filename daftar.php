@@ -8,7 +8,9 @@ if (isset($_POST['submit'])){
 
     $q = "INSERT INTO tb_users(username,email,password)VALUES('$u','$e','$p')";
     $hasil = mysqli_query($conn, $q);
+
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,11 +22,11 @@ if (isset($_POST['submit'])){
 <body>
     <form action="" method="POST">
         <label for="">username</label><br>
-        <input type="text" name="username"><br>
+        <input type="text" name="username" required><br>
         <label for="">email</label><br>
-        <input type="email" name="email"><br>
+        <input type="email" name="email" required><br>
         <label for="">password</label><br>
-        <input type="password" name="password"><br>
+        <input type="password" name="password" required><br>
         <button name="submit">submit</button>
     </form>
 </body>
